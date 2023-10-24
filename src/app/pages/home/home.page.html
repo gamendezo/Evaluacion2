@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="colorAzul">
+    <ion-title>¡Bienvenido! {{mensaje}}</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-button (click)="verStorage()">Ver datos storage</ion-button>
+  <ion-button color="danger" (click)="mostrarUsuarios()">Ver datos de usuarios</ion-button>
+
+  <ion-list>
+    <ion-item>
+      <ion-label>Rut</ion-label>
+      <ion-label>Nombre completo</ion-label>
+    </ion-item>
+
+
+    <ion-item *ngFor="let users of listaUsuarios">
+      <ion-label>{{users.rut}}</ion-label>
+      <ion-label>{{users.nombre_completo}}</ion-label>
+
+    </ion-item>
+  </ion-list>
+
+  <ion-button color="warning" [routerLink]="['/login']"> cerrar sessión </ion-button>
+</ion-content>

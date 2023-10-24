@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="colorAzul">
+    <ion-title>Recupera tu contraseña</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Recupera tu contraseña</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <mat-stepper  orientation="vertical">
+    <mat-step>
+      <ng-template matStepLabel>Nombre de usuario/rut</ng-template>
+      <p>Ingrese su nombre de usuario o su rut</p>
+      <button mat-button matStepperNext > Next</button>
+    </mat-step>
+
+
+    <mat-step>
+      <ng-template matStepLabel>Envie correo electronico</ng-template>
+      <p>Ingrese su correo electronico</p>
+      <button mat-button matStepperNext > Next</button>
+    </mat-step>
+
+
+    <mat-step>
+      <ng-template matStepLabel> !Recibido!</ng-template>
+      <p>Recibira un correo para cambiar su contraseña en los proximos minutos</p>
+      
+    </mat-step>
+  </mat-stepper>
+
+
+
+
+
+</ion-content>
